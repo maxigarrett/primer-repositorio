@@ -1,0 +1,72 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Kulim Park', sans-serif;
+}
+.container-principal
+{
+    widows: 90%;
+    max-width: 1000px;
+    padding: 60px 0;
+    margin: auto;
+}
+article
+{
+    
+    background-color: #fff;
+    color: blueviolet;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: 16px;
+    line-height: 32px;
+    box-shadow: black 5px 5px 50px ;
+   
+}
+
+.tooltip
+{
+    position: relative;
+    text-decoration: none;
+    font-weight: normal;
+    color: blue;
+}
+.tooltip:hover
+{
+    text-decoration: underline;
+}
+
+.tooltip-box
+{
+    position: absolute;
+    left: 0;/*con left y right 0 abarca el largo de el contenedor padre que es toolti`p*/
+    right: 0;
+    bottom: 30px;/*lo sube para que este arriba del enlace este tooltip*/
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    z-index: 10000;
+    display: none;
+}
+.tooltip:hover .tooltip-box
+{
+    display: inline-block;
+}
+.tooltip-box::after
+{
+    content: "";
+    display: block;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 7px); /*se sentra el trinagulito del ttoltip*/
+   
+}
